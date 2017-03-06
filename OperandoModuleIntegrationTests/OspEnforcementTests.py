@@ -7,7 +7,7 @@ from xml.etree import ElementTree
 
 class OspEnforcementTests(AuthenticatableTestCase):
    
-    post_url = "http://ose.integration.operando.lan.esilab.org:8094/operando/core/ose/"
+    post_url = "http://integration.operando.esilab.org:8094/operando/core/ose/"
     service_id = "ose/regulations/.*"
 
     def _post_regulations(self, data, service_ticket):
