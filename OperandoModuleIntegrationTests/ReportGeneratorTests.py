@@ -5,11 +5,11 @@ from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 class ReportGeneratorTests(AuthenticatableTestCase):
    
     url = "http://integration.operando.esilab.org:8122/Report/Report"
-    service_id = "/operando/webui/reports/"
+    service_id = "GET/osp/reports/.*"
 
     valid_report_id = "4"
     invalid_report_id = "99"
-    valid_formats = ["pdf"]
+    valid_formats = ["html", "pdf"]
 
     def _reportsReportIdGet(self, report_id, format, service_ticket):
         headers = {"service-ticket": service_ticket}
@@ -30,13 +30,13 @@ class ReportGeneratorTests(AuthenticatableTestCase):
         
         self.assertEqual(401, response.status_code)
         
-    def test_reportsReportIdGet_nonexistant_report_id_returns_400(self):
+    def test_reportsReportIdGet_nonexistant_report_id_returns_404(self):
         st = self._get_service_ticket()
         format = self.valid_formats[0]
         
         response = self._reportsReportIdGet(self.invalid_report_id, format, st)
         
-        self.assertEqual(400, response.status_code)
+        self.assertEqual(404, response.status_code)
     
     def test_reportsReportIdGet_nonexistant_format_returns_400(self):
         st = self._get_service_ticket()
