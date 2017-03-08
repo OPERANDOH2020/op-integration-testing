@@ -38,7 +38,7 @@ class OspEnforcementTests(AuthenticatableTestCase):
         return super(OspEnforcementTests, self)._get_service_ticket_for(self.service_id)
 
     def test_invalid_service_ticket_does_not_grant_access(self):
-        invalid_st = "invalid service ticket!"
+        invalid_st = "invalid-service-ticket!"
         
         model = self._create_RegulationsPost_model()
         response = self._post_regulations(model, invalid_st)

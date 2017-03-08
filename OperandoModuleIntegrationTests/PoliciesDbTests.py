@@ -14,7 +14,7 @@ class PoliciesDbTests(AuthenticatableTestCase):
         return super(PoliciesDbTests, self)._get_service_ticket_for(PoliciesDatabaseService.service_id)
 
     def test_invalid_service_ticket_does_not_grant_access(self):
-        invalid_st = "invalid service ticket!"
+        invalid_st = "invalid-service-ticket!"
         
         model = self._pdb_service.create_RegulationsPost_model()
         response = self._pdb_service.create_regulation(model, invalid_st)

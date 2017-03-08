@@ -25,7 +25,7 @@ class OApiTests(AuthenticatableTestCase):
         return super(OApiTests, self)._get_service_ticket_for(self.service_id)
 
     def test_get_invalid_service_ticket_returns_401(self):
-        invalid_st = "invalid service ticket!"
+        invalid_st = "invalid-service-ticket!"
         format = self.valid_formats[0]
         
         response = self._reports_reportId_get(self.valid_report_id, format, invalid_st)

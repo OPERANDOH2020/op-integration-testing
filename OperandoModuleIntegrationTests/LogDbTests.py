@@ -62,7 +62,7 @@ class LogDbTests(AuthenticatableTestCase):
         return super(LogDbTests, self)._get_service_ticket_for(self.search_service_id)
 
     def test_post_invalid_service_ticket_returns_403(self):
-        invalid_st = "invalid service ticket!"
+        invalid_st = "invalid-service-ticket!"
         
         model = self._create_LogRequest_ticket()
         response = self._post_logdb(model, invalid_st)

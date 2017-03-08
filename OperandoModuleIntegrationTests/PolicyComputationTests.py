@@ -31,7 +31,7 @@ class PolicyComputationTests(AuthenticatableTestCase):
         return super(PolicyComputationTests, self)._get_service_ticket_for(self._pdb_service.service_id)
 
     def test_post_invalid_service_ticket_does_not_grant_access(self):
-        invalid_st = "invalid service ticket!"
+        invalid_st = "invalid-service-ticket!"
         
         reg_id = self._get_valid_regulation_id()
         response = self._post_regulation(reg_id, invalid_st)

@@ -1,3 +1,4 @@
+import unittest
 import requests
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 
@@ -6,13 +7,13 @@ class ReportGeneratorTests(AuthenticatableTestCase):
     url = "http://integration.operando.esilab.org:8122/Report/Report"
     service_id = "/operando/webui/reports/"
 
-    valid_report_id = "1"
+    valid_report_id = "4"
     invalid_report_id = "99"
-    valid_formats = ["html", "pdf"]
+    valid_formats = ["pdf"]
 
     def _reportsReportIdGet(self, report_id, format, service_ticket):
         headers = {"service-ticket": service_ticket}
-        parameters = {"_reportid": report_id, "format": format}
+        parameters = {"_reportid": report_id, "_format": format}
         
         response = requests.get(self.url, headers=headers, params=parameters, timeout=self.TIMEOUT)
         print response.text
@@ -21,8 +22,8 @@ class ReportGeneratorTests(AuthenticatableTestCase):
     def _get_service_ticket(self):
         return super(ReportGeneratorTests, self)._get_service_ticket_for(self.service_id)
 
-    def test_reportsReportIdGet_invalid_service_sicket_returns_401_code(self):
-        invalid_st = "invalid service ticket!"
+    def test_reportsReportIdGet_invalid_service_ticket_returns_401_code(self):
+        invalid_st = "invalid-service-ticket!"
         format = self.valid_formats[0]
         
         response = self._reportsReportIdGet(self.valid_report_id, format, invalid_st)
