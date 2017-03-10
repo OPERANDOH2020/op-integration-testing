@@ -9,11 +9,20 @@ class UnableToCreateRegulationError(Exception):
 
 class PoliciesDatabaseService(object):
 
+    policy_get_url = "http://integration.operando.esilab.org:8096/operando/core/pdb/OSP/{osp_id}/privacy-policy"
     post_url = "http://integration.operando.esilab.org:8096/operando/core/pdb/regulations"
-    service_id = "pdb/regulations/.*"
+    regulations_service_id = "pdb/regulations/.*"
+    osps_service_id = "pdb/OSP/.*"
 
     def __init__(self, timeout):
         self.timeout = timeout
+
+    def get_privacy_policy(self, service_ticket, osp_id):
+        headers = {"service-ticket": service_ticket}
+        url = self.policy_get_url.format(osp_id = osp_id);
+        response = requests.get(url, headers=headers, timeout=self.timeout)
+
+        return response
 
     def create_regulation(self, data, service_ticket):
         """Creates a regulation using the data. Returns (response, reg_id) 
@@ -26,9 +35,7 @@ class PoliciesDatabaseService(object):
         return response
 
     def get_reg_id_from_response(self, response):
-        content = ElementTree.fromstring(response.text)
-        response_message = content.find("message")
-        data = json.loads(response_message.text)
+        data = json.loads(response.text)
         return data["reg_id"]
 
     def create_RegulationsPost_model(self, 

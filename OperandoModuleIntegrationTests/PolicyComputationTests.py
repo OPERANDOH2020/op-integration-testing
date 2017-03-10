@@ -4,6 +4,7 @@ from test_helpers.aapi_service import AuthenticationApiService
 from test_helpers.pdb_service import PoliciesDatabaseService
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 import json
+import unittest
 
 class PolicyComputationTests(AuthenticatableTestCase):
    
@@ -13,7 +14,7 @@ class PolicyComputationTests(AuthenticatableTestCase):
     invalid_reg_id = -1 # this should always be invalid
 
     def _get_valid_regulation_id(self):
-        service_ticket = self._get_service_ticket_for(self._pdb_service.service_id)
+        service_ticket = self._get_service_ticket_for(self._pdb_service.regulations_service_id)
         model = self._pdb_service.create_RegulationsPost_model()
         response = self._pdb_service.create_regulation(model, service_ticket)
         raise_on_error(response)
@@ -28,7 +29,7 @@ class PolicyComputationTests(AuthenticatableTestCase):
         return response
    
     def _get_service_ticket(self):
-        return super(PolicyComputationTests, self)._get_service_ticket_for(self._pdb_service.service_id)
+        return super(PolicyComputationTests, self)._get_service_ticket_for(self._pdb_service.regulations_service_id)
 
     def test_post_invalid_service_ticket_does_not_grant_access(self):
         invalid_st = "invalid-service-ticket!"
