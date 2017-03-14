@@ -150,7 +150,11 @@ class AuthenticationApiTests(unittest.TestCase):
         # validate cannot access with invalid service id
         with self.assertRaises(InvalidServiceIdError):
             response = self.aapi_service.validate_ServiceTicket(st, invalid_service_id)
-    
+                
             
 if __name__ == '__main__':
-    unittest.main()
+    t = unittest.main(exit=False)
+    if not (t.result.errors or t.result.failures):
+        print "ALL SUCCESSFUL"
+    else:
+        print "ERROR"

@@ -57,4 +57,8 @@ class PolicyComputationTests(AuthenticatableTestCase):
         self.assertEqual(404, response.status_code)
             
 if __name__ == '__main__':
-    unittest.main()
+    t = unittest.main(exit=False)
+    if not (t.result.errors or t.result.failures):
+        print "ALL SUCCESSFUL"
+    else:
+        print "ERROR"
