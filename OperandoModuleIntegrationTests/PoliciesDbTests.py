@@ -16,7 +16,7 @@ class PoliciesDbTests(AuthenticatableTestCase):
 
     # Regulation Input [RAPI->PDB]
 
-    def test_invalid_service_ticket_does_not_grant_access(self):
+    def test_post_regulation_invalid_service_ticket_does_not_grant_access(self):
         invalid_st = "invalid-service-ticket!"
         
         model = self._pdb_service.create_RegulationsPost_model()
@@ -25,7 +25,7 @@ class PoliciesDbTests(AuthenticatableTestCase):
         with self.assertRaises(ClientError):
             raise_on_error(response)
         
-    def test_successful_post_returns_201_status_and_regId(self):
+    def test_post_regulation_successful_post_returns_201_status_and_regId(self):
         st = self._get_service_ticket(PoliciesDatabaseService.regulations_service_id)
 
         model = self._pdb_service.create_RegulationsPost_model()
@@ -42,7 +42,7 @@ class PoliciesDbTests(AuthenticatableTestCase):
         self.assertIsNotNone(reg_id)
         
     
-    def test_invalid_data_is_client_error(self):
+    def test_post_regulation_invalid_data_is_client_error(self):
         """legislation_sector is marked as required. We should get a client error if it is not provided"""
         st = self._get_service_ticket(PoliciesDatabaseService.regulations_service_id)
         
