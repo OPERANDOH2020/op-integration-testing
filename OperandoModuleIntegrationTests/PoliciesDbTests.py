@@ -56,7 +56,7 @@ class PoliciesDbTests(AuthenticatableTestCase):
 
     def test_get_privacy_policy_successful_get_returns_200_and_privacy_policy(self):
         st = self._get_service_ticket(PoliciesDatabaseService.osps_service_id)
-        valid_osp_id = "1"
+        valid_osp_id = self._pdb_service.get_valid_osp_id()
 
         response = self._pdb_service.get_privacy_policy(st, valid_osp_id)
 
@@ -82,7 +82,7 @@ class PoliciesDbTests(AuthenticatableTestCase):
 
     def test_get_privacy_policy_invalid_service_ticket_returns_401(self):
         st = "invalid_service_ticket!"
-        valid_osp_id = "1"
+        valid_osp_id = self._pdb_service.get_valid_osp_id()
 
         response = self._pdb_service.get_privacy_policy(st, valid_osp_id)
 

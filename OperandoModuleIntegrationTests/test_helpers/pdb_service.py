@@ -17,6 +17,13 @@ class PoliciesDatabaseService(object):
     def __init__(self, timeout):
         self.timeout = timeout
 
+    def get_valid_osp_id(self):
+        url = "http://integration.operando.esilab.org:8096/operando/core/pdb/OSP?filter={\"policy_text\":\"\"}"
+        response = requests.get(url, timeout=self.timeout)
+        data = json.loads(response.text)
+        return data[0]["osp_policy_id"]
+
+
     def get_privacy_policy(self, service_ticket, osp_id):
         headers = {"service-ticket": service_ticket}
         url = self.policy_get_url.format(osp_id = osp_id);

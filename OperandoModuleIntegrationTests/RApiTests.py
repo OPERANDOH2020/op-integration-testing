@@ -7,7 +7,7 @@ class RApiTests(AuthenticatableTestCase):
 
     url = "http://integration.operando.esilab.org:8133/operando/interfaces/rapi/regulator/osps/{osp_id}/compliance-report"
     
-    service_id = "GET/osps/.*/compliance-report"
+    service_id = "GET/osps/{osp-id}/compliance-report"
 
     valid_osp_id = "1"
 
