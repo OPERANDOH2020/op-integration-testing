@@ -5,7 +5,7 @@ import unittest
 
 class BdaTests(AuthenticatableTestCase):
 
-    url = "http://integration.operando.esilab.org:8098/operando/core/bigdata/jobs/{job_id}/reports/"
+    url = "http://integration.operando.esilab.org:8098/operando/core/bda/jobs/{job_id}/reports/"
     
     service_id = "GET/osp/bda/jobs/.*/reports"
 
