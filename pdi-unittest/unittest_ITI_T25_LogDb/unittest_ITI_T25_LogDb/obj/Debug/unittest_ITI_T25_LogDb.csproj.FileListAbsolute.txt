@@ -1,0 +1,11 @@
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\unittest_ITI_T25_LogDb.exe.config
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\unittest_ITI_T25_LogDb.exe
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\unittest_ITI_T25_LogDb.pdb
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\Newtonsoft.Json.dll
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\RestSharp.dll
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\Newtonsoft.Json.xml
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\RestSharp.pdb
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\bin\Debug\RestSharp.xml
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\obj\Debug\unittest_ITI_T25_LogDb.csprojResolveAssemblyReference.cache
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\obj\Debug\unittest_ITI_T25_LogDb.exe
+D:\template_siti\operando.eu\Sorgente\Test\unittest_ITI_T25_LogDb\unittest_ITI_T25_LogDb\obj\Debug\unittest_ITI_T25_LogDb.pdb

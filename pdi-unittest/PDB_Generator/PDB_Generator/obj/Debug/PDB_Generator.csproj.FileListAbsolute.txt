@@ -1,0 +1,11 @@
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\PDB_Generator.exe.config
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\PDB_Generator.exe
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\PDB_Generator.pdb
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\Newtonsoft.Json.dll
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\RestSharp.dll
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\Newtonsoft.Json.xml
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\RestSharp.pdb
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\bin\Debug\RestSharp.xml
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\obj\Debug\PDB_Generator.csprojResolveAssemblyReference.cache
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\obj\Debug\PDB_Generator.exe
+D:\template_siti\operando.eu\Sorgente\Test\PDB_Generator\PDB_Generator\obj\Debug\PDB_Generator.pdb

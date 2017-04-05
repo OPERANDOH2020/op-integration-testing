@@ -1,0 +1,150 @@
+{
+    "policy_text": "Gaslini Policy",
+    "policy_url": "n/a",
+    "schema": "Operando_Gaslini.xsd",
+    "workflow": [
+        {
+            "requester_id": "tutorID",
+            "subject": "Tutor",
+            "requested_url": "/GA_Patients/PA_Pathologies/",
+            "action": "Access",
+            "attributes": [{}]
+        }
+        ],
+    "policies": [
+        {
+            "subject": "Tutor",
+            "permission": "True",
+            "action": "Access",
+            "resource": "/CDS_Patients",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Tutor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/CDS_Legals",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Tutor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/CDS_Doctors",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/CDS_Patients",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/documento1",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/documento2",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/op_cds_doctor",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/consensoInformativo1",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/consensoInformativo2",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/consensoInformativo3",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/consensoInformativo4",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Patients/consensoInformativo5",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/CDS_Legals",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Legals/indirizzoResidenza",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Legals/numeroCivico",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Legals/CAP",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Legals/email",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/CDS_Legals/cellulare",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/CDS_Doctors",
+            "attributes": [{}]
+        }
+        
+    ]
+}

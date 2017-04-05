@@ -1,0 +1,115 @@
+{
+    "policy_text": "ASLBG_GA",
+    "policy_url": "n/a",
+    "schema": "Operando_GAT.xsd",
+    "workflow": [
+        {
+            "requester_id": "doctorID",
+            "subject": "doctor",
+            "requested_url": "/GA_Patients/PA_Pathologies/",
+            "action": "Access",
+            "attributes": [{}]
+        }
+        ],
+    "policies": [
+        {
+            "subject": "doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/GA_Patients",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/GA_Patients/debitiDuranteGioco",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/GA_Patients/debiti",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/GA_Patients/famigliaUsoAlcohol",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/GA_Patients/famigliaUsoTabacco",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/GA_Patients/famigliaUsoDroghe",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/GA_Patients/famigliaUsoDroghe",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "True",
+            "action": "Access",
+            "resource": "/PA_Pathology",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PA_Pathology/alcoholDurante",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PA_Pathology/tabaccoDurante",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PA_Pathology/drogaDurante",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PA_Pathology/etaPrimiDisturbi",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/GA_Patients/famigliaUsoDroghe",
+            "attributes": [{}]
+        },
+        
+        {
+            "subject": "doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/PA_OtherPathology",
+            "attributes": [{}]
+        }
+    ]
+}

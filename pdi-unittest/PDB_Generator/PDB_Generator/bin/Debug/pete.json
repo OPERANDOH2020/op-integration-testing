@@ -1,0 +1,128 @@
+{
+    "user_id": "pete",
+    "user_preferences": [{
+        "informationtype": "/personal_information/full_name/given_name",
+        "category": "Medical",
+        "preference": "7",
+        "role": "health_care_professional",
+        "action": "ACCESS",
+        "purpose": "Primary Care",
+        "recipient": "none"
+    }, 
+    {
+        "informationtype": "/personal_information/full_name/given_name",
+        "category": "Medical",
+        "preference": "6",
+        "role": "other",
+        "action": "Access",
+        "purpose": "Admin",
+        "recipient": "none"
+    },
+    {
+        "informationtype": "ANY",
+        "category": "Medical",
+        "preference": "7",
+        "role": "other",
+        "action": "Access",
+        "purpose": "Other",
+        "recipient": "none"
+    },{
+        "informationtype": "/anthropometric_data",
+        "category": "Medical",
+        "preference": "7",
+        "role": "health_care_professional",
+        "action": "Access",
+        "purpose": "Primary Care",
+        "recipient": "none"
+    }, {
+        "informationtype": "/anthropometric_data",
+        "category": "Medical",
+        "preference": "2",
+        "role": "other",
+        "action": "Access",
+        "purpose": "Admin",
+        "recipient": "none"
+    }],
+    "subscribed_osp_policies": [{
+        "osp_id": "YellowPages",
+        "access_policies": [{
+            "subject": "doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/personal_information/full_name/given_name",
+            "attributes": [{
+                "attribute_name": "policy attribute name1",
+                "attribute_value": "policy attribute value1"
+            }, {
+                "attribute_name": "policy attribute name2",
+                "attribute_value": "policy attribute value2"
+            }]
+        }, 
+        {
+            "subject": "doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/personal_information/anthropometric_data",
+            "attributes": [{
+                "attribute_name": "policy attribute name1a",
+                "attribute_value": "policy attribute value1a"
+            }, {
+                "attribute_name": "policy attribute name2a",
+                "attribute_value": "policy attribute value2a"
+            }]
+        },
+        {
+            "subject": "Receptionist",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/personal_information/anthropometric_data",
+            "attributes": [{
+                "attribute_name": "policy attribute name1a",
+                "attribute_value": "policy attribute value1a"
+            }, {
+                "attribute_name": "policy attribute name2a",
+                "attribute_value": "policy attribute value2a"
+            }]
+        }, 
+        {
+            "subject": "Receptionist",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/personal_information/full_name/given_name",
+            "attributes": [{
+                "attribute_name": "policy attribute name1a",
+                "attribute_value": "policy attribute value1a"
+            }, {
+                "attribute_name": "policy attribute name2a",
+                "attribute_value": "policy attribute value2a"
+            }]
+        }, 
+        {
+            "subject": "WebsiteAdmins",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/personal_information/anthropometric_data",
+            "attributes": [{
+                "attribute_name": "policy attribute name1a",
+                "attribute_value": "policy attribute value1a"
+            }, {
+                "attribute_name": "policy attribute name2a",
+                "attribute_value": "policy attribute value2a"
+            }]
+        }, {
+            "subject": "WebsiteAdmins",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/personal_information/full_name/given_name",
+            "attributes": [{
+                "attribute_name": "policy attribute name1a",
+                "attribute_value": "policy attribute value1a"
+            }, {
+                "attribute_name": "policy attribute name2a",
+                "attribute_value": "policy attribute value2a"
+            }]
+        }]
+    }],
+        "subscribed_osp_settings": [{}
+    ]
+}

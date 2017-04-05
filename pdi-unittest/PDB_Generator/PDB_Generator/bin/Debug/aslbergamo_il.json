@@ -1,0 +1,162 @@
+{
+    "policy_text": "ASL Bergamo - GAT Policy",
+    "policy_url": "n/a",
+    "schema": "Operando_BergamiIL.xsd",
+    "workflow": [
+        {
+            "requester_id": "inspectorID",
+            "subject": "doctor",
+            "requested_url": "/GA_Patients/PA_Pathologies/",
+            "action": "Access",
+            "attributes": [{}]
+        }
+        ],
+    "policies": [
+        {
+            "subject": "inspector",
+            "permission": "True",
+            "action": "Access",
+            "resource": "/PSW_Inspections",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/PSW_Penalities",
+            "attributes": [{}]
+        },
+        {
+            "subject": "doctor",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/PSW_Payments",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "true",
+            "action": "Access",
+            "resource": "/PSW_Inspections",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/provincia",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/comune",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/indirizzo",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/numeroCivico",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/CAP",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/oraInizio",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/oraFine",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/idIspettore",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/report",
+            "attributes": [{}]
+        },{
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/daRicontrollare",
+            "attributes": [{}]
+        },{
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/dataOraProssimaIspezione",
+            "attributes": [{}]
+        },{
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Inspections/idIspettoreProssimaIspezione",
+            "attributes": [{}]
+        },
+        
+        {
+            "subject": "Accountant",
+            "permission": "True",
+            "action": "Access",
+            "resource": "/PSW_Penalities",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Penalities/motivo",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "false",
+            "action": "Access",
+            "resource": "/PSW_Penalities/primaPenalita",
+            "attributes": [{}]
+        },
+        {
+            "subject": "Accountant",
+            "permission": "True",
+            "action": "Access",
+            "resource": "/PSW_Payments",
+            "attributes": [{}]
+        }
+        
+    ]
+}
