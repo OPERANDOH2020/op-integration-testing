@@ -53,7 +53,6 @@ class AuthenticationApiTests(unittest.TestCase):
             # Validate can access service with ST
             response = self.aapi_service.validate_ServiceTicket(st, service_id)
             print response.text
-            # TODO what is the expected format of the response? I know I get a 200 response.
 
     def testSingleSignOnOperando_ReturnsDifferentTGTs(self):
         """We expect different TGTs to be generated"""
