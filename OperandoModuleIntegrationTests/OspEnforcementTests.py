@@ -4,10 +4,11 @@ from test_helpers.aapi_service import AuthenticationApiService
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 import json
 from xml.etree import ElementTree
+import Settings
 
 class OspEnforcementTests(AuthenticatableTestCase):
    
-    post_url = "http://integration.operando.esilab.org:8094/operando/core/ose/"
+    post_url = Settings.ose_url + "/";
     service_id = "ose/regulations/.*"
 
     def _post_regulations(self, data, service_ticket):

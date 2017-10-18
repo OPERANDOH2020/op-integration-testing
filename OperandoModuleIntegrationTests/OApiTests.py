@@ -1,9 +1,10 @@
 import requests
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
+import Settings
 
 class OApiTests(AuthenticatableTestCase):
    
-    root_url = "http://integration.operando.esilab.org:8131/operando/interfaces/oapi"
+    root_url = Settings.oapi_url;
     reportsReportIdGet_url = root_url + "/reports/{report_id}"
     
     service_id = "GET/osp/reports/.*"

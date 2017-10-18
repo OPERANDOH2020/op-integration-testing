@@ -2,11 +2,12 @@ import requests
 from test_helpers.aapi_service import AuthenticationApiService
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 import unittest
+import Settings
 
 class LogDbTests(AuthenticatableTestCase):
    
-    post_url = "http://integration.operando.esilab.org:8090/operando/core/ldb/log/logTicket"
-    search_url = "http://integration.operando.esilab.org:8091/operando/core/ldbsearch/log/search"
+    post_url = Settings.ldb_url + "/log/logTicket"
+    search_url = Settings.ldb_search_url + "/log/search"
     
     post_service_id = "/operando/core/ldb"
     search_service_id = "/operando/core/ldbsearch/log/search"

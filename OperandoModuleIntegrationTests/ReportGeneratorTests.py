@@ -1,10 +1,11 @@
 import unittest
 import requests
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
+import Settings
 
 class ReportGeneratorTests(AuthenticatableTestCase):
    
-    url = "http://integration.operando.esilab.org:8122/Report/Report"
+    url = Settings.rg_url + "/Report"
     service_id = "GET/osp/reports/.*"
 
     valid_report_id = "4"

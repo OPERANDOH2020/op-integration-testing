@@ -1,6 +1,7 @@
 import requests
 from xml.etree import ElementTree
 import test_helpers.utils
+import Settings
 
 class InvalidServiceTicketError(Exception):
     """The service ticket is not valid to access the requested service"""
@@ -13,7 +14,7 @@ class UnknownServiceTicketError(Exception):
 
 class AuthenticationApiService(object):
     
-    root_url = "http://integration.operando.esilab.org:8135/operando/interfaces/aapi"
+    root_url = Settings.aapi_url;
     SingleSignOnOperando_url = root_url + "/aapi/tickets"
     ValidateServiceTicket_url = root_url + "/aapi/tickets/{st}/validate"
     GetServiceTicket_url = root_url + "/aapi/tickets/{tgt}"

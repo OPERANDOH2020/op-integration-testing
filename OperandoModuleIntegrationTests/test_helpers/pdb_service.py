@@ -3,14 +3,15 @@ import requests
 import sys
 from xml.etree import ElementTree
 from test_helpers.utils import raise_on_error
+import Settings
 
 class UnableToCreateRegulationError(Exception):
     """The response did not contain the regulation id"""
 
 class PoliciesDatabaseService(object):
 
-    policy_get_url = "http://integration.operando.esilab.org:8096/operando/core/pdb/OSP/{osp_id}/privacy-policy"
-    post_url = "http://integration.operando.esilab.org:8096/operando/core/pdb/regulations"
+    policy_get_url = Settings.pdb_url + "/OSP/{osp_id}/privacy-policy"
+    post_url = Settings.pdb_url + "/regulations"
     regulations_service_id = "pdb/regulations/.*"
     osps_service_id = "pdb/OSP/.*"
 
@@ -18,7 +19,7 @@ class PoliciesDatabaseService(object):
         self.timeout = timeout
 
     def get_valid_osp_id(self):
-        url = "http://integration.operando.esilab.org:8096/operando/core/pdb/OSP?filter={\"policy_text\":\"\"}"
+        url = Settings.pdb_url + "/OSP?filter={\"policy_text\":\"\"}"
         response = requests.get(url, timeout=self.timeout)
         data = json.loads(response.text)
         return data[0]["policy_url"]

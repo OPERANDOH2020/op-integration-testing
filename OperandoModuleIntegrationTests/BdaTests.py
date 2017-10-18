@@ -2,10 +2,11 @@ import requests
 from test_helpers.aapi_service import AuthenticationApiService
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 import unittest
+import Settings
 
 class BdaTests(AuthenticatableTestCase):
 
-    url = "http://integration.operando.esilab.org:8098/operando/core/bda/jobs/{job_id}/reports/"
+    url = Settings.bda_url + "/jobs/{job_id}/reports/"
     
     service_id = "GET/osp/bda/jobs/.*/reports"
 

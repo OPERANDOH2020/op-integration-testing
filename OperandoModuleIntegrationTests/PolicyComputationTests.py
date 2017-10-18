@@ -5,10 +5,11 @@ from test_helpers.pdb_service import PoliciesDatabaseService
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 import json
 import unittest
+import Settings
 
 class PolicyComputationTests(AuthenticatableTestCase):
    
-    post_url = "http://integration.operando.esilab.org:8095/operando/core/pc/regulations/{reg_id}"
+    post_url = Settings.pc_url + "/regulations/{reg_id}"
 
     _pdb_service = PoliciesDatabaseService(AuthenticatableTestCase.TIMEOUT)
     invalid_reg_id = -1 # this should always be invalid

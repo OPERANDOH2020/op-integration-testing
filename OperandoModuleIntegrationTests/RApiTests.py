@@ -3,12 +3,13 @@ from test_helpers.aapi_service import AuthenticationApiService
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 from test_helpers.pdb_service import PoliciesDatabaseService
 import unittest
+import Settings
 
 class RApiTests(AuthenticatableTestCase):
 
     _pdb_service = PoliciesDatabaseService(AuthenticatableTestCase.TIMEOUT)
 
-    url = "http://integration.operando.esilab.org:8133/operando/interfaces/rapi/regulator/osps/{osp_id}/compliance-report"
+    url = Settings.rapi_url + "/regulator/osps/{osp_id}/compliance-report"
     
     service_id = "GET/osps/{osp-id}/compliance-report"
 
