@@ -4,6 +4,7 @@ from test_helpers.aapi_service import AuthenticationApiService
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
 import json
 from xml.etree import ElementTree
+import unittest
 import Settings
 
 class OspEnforcementTests(AuthenticatableTestCase):

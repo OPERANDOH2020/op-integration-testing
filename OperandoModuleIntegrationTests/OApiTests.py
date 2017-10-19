@@ -1,5 +1,6 @@
 import requests
 from test_helpers.AuthenticatableTestCase import AuthenticatableTestCase
+import unittest
 import Settings
 
 class OApiTests(AuthenticatableTestCase):
